@@ -16,10 +16,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v1.0.0
-        release_name: Release v1.0.0
+        tag_name: v1.0.1
+        release_name: Release v1.0.1
         body: |
-          Changes in this Release v1.0.0
+          Changes in this Release v1.0.1
           - First Change
           - Second Change
         draft: false
