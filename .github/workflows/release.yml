@@ -22,8 +22,8 @@ jobs:
         username: ${{ secrets.GIT_USENAME }}
         password: ${{ secrets.GIT_PASSWORD }}
       with:
-        tag_name: v1.0.3
-        release_name: Release v1.0.3
+        tag_name: v1.0.4
+        release_name: Release v1.0.4
         body: |
           github.release.log\nPoint 1 \nPonit 2:
         draft: false
