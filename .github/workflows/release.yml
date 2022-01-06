@@ -14,16 +14,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Create Release
+      if: ${{ github.ref == 'refs/heads/master' }}
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        username: ${{ secrets.GIT_USENAME }}
+        password: ${{ secrets.GIT_PASSWORD }}
       with:
-        tag_name: v1.0.2
-        release_name: Release v1.0.2
+        tag_name: v1.0.3
+        release_name: Release v1.0.3
         body: |
-          Changes in this Release v1.0.2
-          - First Change
-          - Second Change
+          github.release.log\nPoint 1 \nPonit 2:
         draft: false
         prerelease: false
